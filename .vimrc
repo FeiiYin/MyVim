@@ -17,6 +17,9 @@ Plugin 'maralla/completor.vim'
 Plugin 'vim-syntastic/syntastic'
 "代码风格检查
 Plugin 'nvie/vim-flake8'
+"给vim添加一个树形目录"
+Plugin 'scrooloose/nerdtree'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -64,6 +67,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 """""""
+"设置nerdtree“
+map <C-n> :NERDTreeToggle<CR> "键盘映射打开树形目录"
 
 """""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""

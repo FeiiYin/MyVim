@@ -11,9 +11,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-"不全ptyhon代码的工具
+"补全ptyhon代码的工具
 Plugin 'maralla/completor.vim'
-
+"检查代码语法的工具
+Plugin 'vim-syntastic/syntastic'
+"代码风格检查
+Plugin 'nvie/vim-flake8'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -46,7 +49,21 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "设置completor
-let g:completor_python_binary = 'python' "好像这样才能用
+let g:completor_python_binary = 'python' "completor好像这样才能用
+"""
+"关闭代码预览窗口,这样就不会在补全python的时候，提供相关函数的信息,打开这个之后有个bug（你打空格的时候就马上会有代码补全提示）
+set completeopt-=preview
+"syntastic推荐设置
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_python_python_exe = 'python' "自己加的
+let g:syntastic_python_checkers = ['flake8'] "自己加的
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"""""""
 
 """""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""

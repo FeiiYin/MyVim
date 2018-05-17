@@ -19,7 +19,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 "给vim添加一个树形目录"
 Plugin 'scrooloose/nerdtree'
-
+"给vim添加状态栏"
+Plugin 'Lokaltog/vim-powerline'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo

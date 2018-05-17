@@ -70,6 +70,10 @@ let g:syntastic_check_on_wq = 0
 """""""
 "设置nerdtree“
 map <C-n> :NERDTreeToggle<CR> "键盘映射打开树形目录"
+"设置powerline"
+set laststatus=2 "总是展示状态栏
+set t_Co=256 "设置颜色支持(256种?
+"let g:Powerline_cache_dir=simplify(expand('<sfile>:p:h') .'/..') "好像是在状态栏显示路径
 
 """""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""
